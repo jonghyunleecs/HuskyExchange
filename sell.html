@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  Name: Joshua Ren and Jong-Hyun Lee
+  Date: 12.06.2024
+  Section: CSE 154 AB
+
+  This is the sell.html page for the HuskyExchange website. It allows the user to list an item
+  for sell by putting in its name, description, price, category, and image.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Sell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="left">
+      <a href="index.html">HuskyExchange</a>
+    </div>
+    <div class="right">
+      <a class="log-in-or-out" href="login.html">Log In</a>
+      <form>
+        <button class="log-in-or-out">Log Out</button>
+      </form>
+      <a href="purchase-history.html">Purchase History</a>
+      <a href="sell.html">Sell</a>
+    </div>
+  </header>
+  <section id="sell">
+    <h1>Sell a Product</h1>
+    <form>
+      <input class="sell-input" type="text" placeholder="Name" required>
+      <input class="sell-input" type="number" placeholder="Price" min="0" required>
+      <input class="sell-input" type="url" placeholder="Image" required>
+      <input class="sell-input" type="text" placeholder="Description" required>
+      <select class="sell-input gray" name="category">
+        <option value="category" selected disabled hidden>Category</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Furniture">Furniture</option>
+        <option value="School Supplies">School Supplies</option>
+      </select>
+      <button class="sell-input" >Create</button>
+      <h2 class="hidden">Successfully added your product to the product list</h2>
+      <p id="sell-error" class="hidden">Please select a category</p>
+    </form>
+  </section>
+  <footer>
+    <h2>Pages</h2>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="sell.html">Sell</a></p>
+    <p><a href="purchase-history.html">Purchase History</a></p>
+  </footer>
+</body>
+</html>

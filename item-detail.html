@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  Name: Joshua Ren and Jong-Hyun Lee
+  Date: 12.06.2024
+  Section: CSE 154 AB
+
+  This is the item-detail.html page for the HuskyExchange website. It gives details on a specific
+  item in the website's shop.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Detail</title>
+  <script src="index.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="left">
+      <a href="index.html">HuskyExchange</a>
+    </div>
+    <div class="right">
+      <a class="log-in-or-out" href="login.html">Log In</a>
+      <form>
+        <button class="log-in-or-out">Log Out</button>
+      </form>
+      <a href="purchase-history.html">Purchase History</a>
+      <a href="sell.html">Sell</a>
+    </div>
+  </header>
+  <section id="product-detail">
+    <!--
+      image from elementor, a website builder
+      https://developers.elementor.com/docs/hooks/placeholder-image/
+    -->
+    <img id="product-image" alt="Placeholder product" src="imgs/item-placeholder.jpg">
+    <h1 id="product-name"></h1>
+    <div id="product-info">
+      <p id="product-price"></p>
+      <p id="product-description"></p>
+      <p id="product-seller"></p>
+      <form>
+        <span id="confirm-pickup">
+          <input type="checkbox" name="willing-to-pick-up" id="willing-to-pick-up">
+          <span class="checkbox unchecked"></span>
+          <label for="willing-to-pick-up">I understand that I am responsible for picking up this
+          product from the HUB</label>
+        </span>
+        <br>
+        <button id="buy-now">Buy Now</button>
+        <button id="return-to-details" class="hidden">Return to Details</button>
+        <button id="confirm-purchase" class="hidden">Confirm</button>
+      </form>
+    </div>
+  </section>
+  <section id="purchase-failed">
+    <p class="hidden">You can't purchase a product that you're selling.</p>
+    <p class="hidden">You must be willing to pick up the product from the HUB for you to
+    purchase the product.</p>
+  </section>
+  <section id="product-sold" class="hidden">
+    <h1>This product has already been sold</h1>
+  </section>
+  <section id="product-nonexistent" class="hidden">
+    <h1>This product doesn't exist</h1>
+  </section>
+  <section id="product-purchased" class="hidden">
+    <h1>You have successfully purchased this product.</h1>
+  </section>
+  <footer>
+    <h2>Pages</h2>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="sell.html">Sell</a></p>
+    <p><a href="purchase-history.html">Purchase History</a></p>
+  </footer>
+</body>
+</html>

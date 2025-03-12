@@ -1,0 +1,497 @@
+/*
+  Name: Joshua Ren and Jong-Hyun Lee
+  Date: 12.06.2024
+  Section: CSE 154 AB
+  This is the styles.css page that is used by the HuskyExchange website for
+  the Final Project in CSE 154. It has a font of Poppins and a minimalistic
+  style. It adds a black and white style to the buttons and rounds the corners of the buttons and
+  the text input boxes.
+*/
+
+body {
+  background-color: #D9D9D9;
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+}
+
+button, input, select {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 70px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+footer h2 {
+  padding-top: 70px;
+  margin-top: 0px;
+}
+
+footer p:last-child {
+  padding-bottom: 70px;
+  margin: 0px;
+}
+
+.checked {
+  background-color: black;
+}
+
+.unchecked {
+  background-color: rgb(204, 194, 194);
+}
+
+.checkbox {
+  margin-right: 10px;
+  border: 4px solid black;
+  display: inline-block;
+  border-radius: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.gray {
+  color: #757575;
+}
+
+.black {
+  color: black;
+}
+
+header .left a {
+  float: left;
+  padding-left: 30px;
+}
+
+header .right a, header .right button {
+  float: right;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+#search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.806);
+}
+
+#main-product-view .text-container button {
+  background-color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 35px;
+}
+
+#purchase-history article img, #main-product-view article img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 0px 0px 25px;
+}
+
+#purchase-history article .image-container, #main-product-view article .image-container {
+  width: 30%;
+  overflow: hidden;
+}
+
+#purchase-history .text-container, #main-product-view .text-container {
+  margin: 40px;
+  max-width: 70%;
+}
+
+#product-detail {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  background: #D9D9D9;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#product-sold, #product-nonexistent, #product-purchased {
+  width: 80%;
+  text-align: center;
+}
+
+#product-image {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+#product-info p {
+  font-size: 24px;
+}
+
+#product-detail p {
+  font-size: 30px;
+}
+
+header a, header button, #popup button {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.log-in-or-out:hover,
+#filter form button:hover,
+#toggle-view button:hover,
+#product-detail button:hover {
+  color: rgb(210, 204, 204);
+  transition: color 0.5s ease;
+}
+
+#authentication-required a {
+  color: black;
+}
+
+#main-product-view {
+  backdrop-filter: blur(100px);
+}
+
+#popup button {
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+}
+
+header .log-in-or-out,
+#filter form button,
+#toggle-view button,
+#product-detail button,
+#popup button {
+  margin-right: 30px;
+  border: 3px;
+  background-color: black;
+  color: white;
+  border-radius: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+
+#toggle-view button {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+#product-detail button {
+  margin-top: 30px;
+}
+
+#filter form button, #toggle-view button, #product-detail button {
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#filter form button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+section#toggle-view {
+  text-align: center;
+}
+
+#popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  text-align: center;
+  top: 40%;
+  font-size: 30px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 20px;
+  width: 30%;
+  bottom: auto;
+}
+
+#popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+section#log-in form, section#sign-up form, #sell form {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+
+section#log-in h1, section#sign-up h1, #sell h1 {
+  padding-top: 70px;
+}
+
+section#log-in, section#sign-up, #sell {
+  background: black;
+  width: 40%;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#error, #authentication-required, #successful-log-out {
+  width: 80%;
+  text-align: center;
+}
+
+#sell form h2 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#log-in input,
+section#log-in button,
+section#sign-up input,
+section#sign-up button,
+#sell input,
+#sell button,
+#sell select,
+#product-detail input {
+  width: 65%;
+  border-radius: 20px;
+  padding: 15px 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+h2#signup-success, h2#login-success, h2#already-logged-in {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 70px;
+}
+
+#signup-success a, #login-success a, #already-logged-in a, #log-in form > p a {
+  color: white;
+}
+
+#signup-error-box p, #login-error-box p, #filter-error, #purchase-failed p, p#sell-error {
+  color: red;
+  font-size: 25px;
+  margin: 0px;
+  text-align: center;
+}
+
+#filter-error {
+  margin-bottom: 30px;
+}
+
+#purchase-history h1, #main-product-view h1 {
+  text-align: center;
+}
+
+#main-product-view article {
+  margin-bottom: 40px;
+}
+
+#main-product-view article:last-child {
+  margin-bottom: 0;
+}
+
+#main-product-view h2 {
+  text-align: left;
+}
+
+#purchase-history h2, #main-product-view h2 {
+  margin: 0px;
+  font-size: 40px;
+}
+
+#purchase-history p, #main-product-view p {
+  font-size: 25px;
+}
+
+#purchase-history article, #main-product-view article {
+  width: 50%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+  border-radius: 25px;
+  color: white;
+  min-height: 300px;
+  overflow-wrap: break-word;
+}
+
+#purchase-history article {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+section#intro h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+section#search-bar input {
+  border-radius: 25px;
+  width: 60%;
+  padding: 15px 30px;
+  font-size: 35px;
+  color: white;
+  background: black;
+}
+
+#filter label, #product-detail label {
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+#confirm-pickup input {
+  display: none;
+}
+
+section#product-carousel article img {
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+section#product-carousel article div {
+  height: 160px;
+}
+
+section#product-carousel article {
+  margin: 63px 30px;
+  background: #D9D9D9;
+  border-radius: 15px;
+  color: black;
+}
+
+section#product-carousel article h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+section#product-carousel article p:last-child {
+  padding-bottom: 25px;
+}
+
+section#product-carousel {
+  background: black;
+  border-radius: 10px;
+  width: 80%;
+  color: white;
+  text-align: center;
+  min-height: 451.17px;
+  align-items: center;
+}
+
+#product-carousel article {
+  width: 250px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+
+#product-carousel > img {
+  height: 25px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+#product-carousel > h2 {
+  padding-top: 60px;
+  margin-top: 100px;
+}
+
+#carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+section#search-bar form {
+  text-align: center;
+}
+
+img#left-arrow, img#right-arrow {
+  padding: 10px;
+  background-color: white;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+section#carousel {
+  display: flex;
+  align-items: center;
+}
+
+#log-in form > p {
+  font-size: 25px;
+}
+
+section#filter {
+  text-align: center;
+  padding: 30px 100px 0px 100px;
+}
+
+#filter input {
+  width: 50px;
+  display: none;
+}
+
+#clothing, #furniture {
+  padding-right: 30px;
+}

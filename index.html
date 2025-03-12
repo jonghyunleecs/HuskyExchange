@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  Name: Joshua Ren and Jong-Hyun Lee
+  Date: 12.06.2024
+  Section: CSE 154 AB
+
+  This is the index.html page for the HuskyExchange website. It serves as the home page of the
+  website. It allows the user to view all products available for sale and search through or filter
+  through them. It has two different product views for the user to toggle between. In the main
+  product view, there is a button on each product that tells the user if the product is a good
+  deal.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>HuskyExchange</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="non-popup">
+    <div class="left">
+      <a href="index.html">HuskyExchange</a>
+    </div>
+    <div class="right">
+      <a class="log-in-or-out" href="login.html">Log In</a>
+      <form>
+        <button class="log-in-or-out">Log Out</button>
+      </form>
+      <a href="purchase-history.html">Purchase History</a>
+      <a href="sell.html">Sell</a>
+    </div>
+  </header>
+  <section id="intro" class="non-popup">
+    <h1>HuskyExchange</h1>
+  </section>
+  <section id="search-bar" class="non-popup">
+    <form>
+      <input type="text" placeholder="Product Search">
+    </form>
+  </section>
+  <section id="filter" class="non-popup">
+    <form>
+      <span id="clothing">
+        <input type="checkbox" name="clothing" id="clothing-checkbox" checked="checked">
+        <span class="checkbox checked"></span>
+        <label for="clothing-checkbox">Clothing</label>
+      </span>
+      <span id="furniture">
+        <input type="checkbox" name="furniture" id="furniture-checkbox" checked="checked">
+        <span class="checkbox checked"></span>
+        <label for="furniture-checkbox">Furniture</label>
+      </span>
+      <span id="school-supplies">
+        <input type="checkbox" name="school-supplies" id="school-supplies-checkbox"
+        checked="checked">
+        <span class="checkbox checked"></span>
+        <label for="school-supplies-checkbox">School Supplies</label>
+      </span>
+      <br>
+      <button>Filter</button>
+    </form>
+    <p id="filter-error" class="hidden">There must be at least one filter box checked</p>
+  </section>
+  <section id="toggle-view" class="non-popup">
+    <button>Toggle View</button>
+  </section>
+  <section id="main-product-view" class="non-popup">
+  </section>
+  <section id="product-carousel">
+    <img id="left-arrow" src="imgs/arrow-left.png" alt="Arrowhead pointing towards the left">
+    <section id="carousel">
+    </section>
+    <img id="right-arrow" src="imgs/arrow-right.png" alt="Arrowhead pointing towards the right">
+  </section>
+  <section id="popup">
+    <p></p>
+    <button>Done</button>
+  </section>
+  <footer>
+    <h2>Pages</h2>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="sell.html">Sell</a></p>
+    <p><a href="purchase-history.html">Purchase History</a></p>
+  </footer>
+</body>
+</html>
